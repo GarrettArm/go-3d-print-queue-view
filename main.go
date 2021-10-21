@@ -91,6 +91,11 @@ func queueHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	fmt.Println("A Golang port of 3dprintqueueview by garrett")
+	fmt.Println("Serving pages at http://localhost:8000/ and http://localhost:8000/image_rotation")
+	fmt.Println("nodjs version code at https://libapps-admin.uncw.edu/randall-dev/3d-prin-queue-view")
+	fmt.Println("go version code at https://github.com/GarrettArm/go-3d-print-queue-view")
+
 	http.HandleFunc("/", queueHandler)
 	http.HandleFunc("/image_rotation", rotatonHandler)
 	log.Fatal(http.ListenAndServe(":8000", nil))
